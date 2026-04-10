@@ -157,6 +157,67 @@
                 max-width: 350px;
             }
         }
+        /* Carousel Container */
+.testimonials-section {
+    margin-top: 60px;
+    padding: 50px 0;
+    background-color: #0f172a; /* Slightly darker than body for depth */
+    overflow: hidden; /* Hides the images moving off-screen */
+}
+
+.testimonials-section h3 {
+    font-size: 2.2rem;
+    color: #fbbf24;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Row Styling */
+.carousel-row {
+    display: flex;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.scroll-track {
+    display: flex;
+    gap: 15px;
+    padding: 0 7.5px;
+}
+
+.scroll-track img {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
+
+/* Animations */
+@keyframes scrollLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } /* Moves halfway through the double set */
+}
+
+@keyframes scrollRight {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+
+/* Apply animations to rows */
+.row-left {
+    animation: scrollLeft 40s linear infinite;
+}
+
+.row-right {
+    animation: scrollRight 40s linear infinite;
+}
+
+/* Pause on hover so people can see specific photos */
+.carousel-row:hover {
+    animation-play-state: paused;
+}
     </style>
 </head>
 <body>
@@ -183,16 +244,37 @@
             </div>
         </div>
 
-        <div class="testimonials-section">
-            <h3>Loved by </h3>
-            <div class="customer-gallery">
-                <img src="https://raw.githubusercontent.com/himanshupdev123/Kannee/refs/heads/main/hc4.jpeg" alt="Happy Customer 1">
-                <img src="https://raw.githubusercontent.com/himanshupdev123/Kannee/refs/heads/main/hc3.jpeg" alt="Happy Customer 2">
-                <img src="https://raw.githubusercontent.com/himanshupdev123/Kannee/refs/heads/main/hc1.jpeg" alt="Happy Customer 3">
-                <img src="https://raw.githubusercontent.com/himanshupdev123/Kannee/refs/heads/main/hc2.jpeg" alt="Happy Customer 4">
-            </div>
+       <div class="testimonials-section">
+    <h3>Loved by our Customers</h3>
+
+    <div class="carousel-row row-left">
+        <div class="scroll-track">
+            <img src="customer1.jpg"><img src="customer2.jpg"><img src="customer3.jpg"><img src="customer4.jpg"><img src="customer5.jpg">
+            <img src="customer6.jpg"><img src="customer7.jpg"><img src="customer8.jpg"><img src="customer9.jpg"><img src="customer10.jpg"><img src="customer11.jpg">
+            <img src="customer1.jpg"><img src="customer2.jpg"><img src="customer3.jpg"><img src="customer4.jpg"><img src="customer5.jpg">
+            <img src="customer6.jpg"><img src="customer7.jpg"><img src="customer8.jpg"><img src="customer9.jpg"><img src="customer10.jpg"><img src="customer11.jpg">
         </div>
     </div>
+
+    <div class="carousel-row row-right">
+        <div class="scroll-track">
+            <img src="customer12.jpg"><img src="customer13.jpg"><img src="customer14.jpg"><img src="customer15.jpg"><img src="customer16.jpg">
+            <img src="customer17.jpg"><img src="customer18.jpg"><img src="customer19.jpg"><img src="customer20.jpg"><img src="customer21.jpg"><img src="customer22.jpg">
+            <img src="customer12.jpg"><img src="customer13.jpg"><img src="customer14.jpg"><img src="customer15.jpg"><img src="customer16.jpg">
+            <img src="customer17.jpg"><img src="customer18.jpg"><img src="customer19.jpg"><img src="customer20.jpg"><img src="customer21.jpg"><img src="customer22.jpg">
+        </div>
+    </div>
+
+    <div class="carousel-row row-left">
+        <div class="scroll-track">
+            <img src="customer23.jpg"><img src="customer24.jpg"><img src="customer25.jpg"><img src="customer26.jpg"><img src="customer27.jpg">
+            <img src="customer28.jpg"><img src="customer29.jpg"><img src="customer30.jpg"><img src="customer31.jpg"><img src="customer32.jpg"><img src="customer33.jpg">
+            <img src="customer23.jpg"><img src="customer24.jpg"><img src="customer25.jpg"><img src="customer26.jpg"><img src="customer27.jpg">
+            <img src="customer28.jpg"><img src="customer29.jpg"><img src="customer30.jpg"><img src="customer31.jpg"><img src="customer32.jpg"><img src="customer33.jpg">
+        </div>
+    </div>
+</div>
+</div>
 
 </body>
 </html>
